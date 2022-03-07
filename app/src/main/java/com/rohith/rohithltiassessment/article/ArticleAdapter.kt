@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.rohith.rohithltiassessment.databinding.GridViewItemBinding
+import com.rohith.rohithltiassessment.databinding.NewsItemBinding
 import com.rohith.rohithltiassessment.network.Source
 
 
@@ -14,7 +14,7 @@ class ArticleAdapter(private val onClickListener: OnClickListener ) : ListAdapte
         ArticleAdapter.NewsArticleViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleAdapter.NewsArticleViewHolder {
-        return NewsArticleViewHolder(GridViewItemBinding.inflate(
+        return NewsArticleViewHolder(NewsItemBinding.inflate(
             LayoutInflater.from(parent.context)))
     }
 
@@ -41,7 +41,7 @@ class ArticleAdapter(private val onClickListener: OnClickListener ) : ListAdapte
     }
 
     class NewsArticleViewHolder(private var binding:
-                                 GridViewItemBinding
+                                 NewsItemBinding
     ):
         RecyclerView.ViewHolder(binding.root) {
 
